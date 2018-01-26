@@ -1,0 +1,30 @@
+{
+            try
+            {
+                //enter value in text box will be in decimal form AND DECLARE VARIABLE.
+                decimal num1;
+                decimal num2;
+                decimal num3;
+                decimal sum;
+
+                //using parse method to convert entered value.
+                num1 = decimal.Parse(NUMBER1textBox.Text);
+                num2 = decimal.Parse(NUMBER2textBox.Text);
+                num3 = decimal.Parse(NUMBER3textBox.Text);
+
+                //ADD ALL ENTER VALUE
+                sum = TOTAL(num1, num2, num3);
+                //DISPLAY SUN=M IN TOTALLABEL BOX.
+                TOTALlabel.Text = sum.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("ex.message");
+            }
+        }
+
+        private decimal TOTAL(decimal num1, decimal num2, decimal num3)
+        {
+            //RETURN THE ENTER VALUE.
+            return num1 + num2 + num3;
+        }
